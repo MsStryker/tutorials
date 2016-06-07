@@ -12,14 +12,14 @@ def is_even(number):
 def is_prime(number):
     if number <= 1:
         return False
-    elif number == 2 or number == 3:
+    elif number == 2:
         return True
 
     if is_even(number):
         return False
 
     sqrt_n = int(math.sqrt(number) + 1)
-    for i in range(5, sqrt_n, 2):
+    for i in range(3, sqrt_n, 2):
         if number % i == 0:
             return False
 
